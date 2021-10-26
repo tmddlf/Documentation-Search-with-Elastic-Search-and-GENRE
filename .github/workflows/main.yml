@@ -21,18 +21,18 @@ jobs:
     - uses: Gr1N/setup-poetry@v4
 
     - name: Check dependencies
-      run: make doctor
+      run: cd code && make doctor
 
     - uses: actions/cache@v2
       with:
-        path: .venv
+        path: code/.venv
         key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
 
     - name: Install dependencies
-      run: make install
+      run: cd code && make install
 
     - name: Check code
-      run: make check
+      run: cd code && make check
 
     - name: Test code
-      run: make test
+      run: cd code && make test
