@@ -1,6 +1,6 @@
-from pkg_resources import get_distribution, DistributionNotFound
+from pkg_resources import DistributionNotFound, get_distribution
 
 try:
-    __version__ = get_distribution('CourseProject').version
+    __version__ = get_distribution("CourseProject").version
 except DistributionNotFound:
-    __version__ = '(local)'
+    __version__ = "(local)"
