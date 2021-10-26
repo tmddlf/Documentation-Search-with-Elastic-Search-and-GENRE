@@ -42,7 +42,6 @@ isort = "=5.9.3"
 
 # Linters
 mypy = "~0.812"
-pydocstyle = "^6.1"
 pylint = "~2.6"
 
 # Testing

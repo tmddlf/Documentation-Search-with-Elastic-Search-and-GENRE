@@ -65,7 +65,6 @@ ifdef CI
 endif
 	poetry run mypy $(PACKAGE) tests --config-file=.mypy.ini
 	poetry run pylint $(PACKAGE) tests --rcfile=.pylint.ini
-	poetry run pydocstyle $(PACKAGE) tests
 
 # TESTS #######################################################################
 
